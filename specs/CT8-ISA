@@ -6,6 +6,7 @@ Processor: CT-8
 * 16 bit address bus unidirectional
 * endianess - Little endian
 * operations are only register-register except LW and SW.
+* Harvard architecture.
 
 === PLAN ===
 Project: I am going to make mictoscheme of my processor in Logisim. then i am going to write EMULATOR for this thing. 
