@@ -1,17 +1,10 @@
 Processor: CT-8
 
 === OVERVIEW ===
-* 8-bit data word size and data bus length bidirectional
+* 8-bit data bus
 * 8-bit instruction word size
-* 16 bit address bus unidirectional
-* endianess - Little endian
-* operations are only register-register except LW and SW.
-
-=== PLAN ===
-Project: I am going to make mictoscheme of my processor in Logisim. then i am going to write EMULATOR for this thing. 
-EMULATOR is going to be written in C or rust, but i dont know rust yet so maybe it is going to be my first project on rust.
-Then it would be cool to write an ASSEMBLER.
-All computations should perform in ALU, the design of the circuit is similar to the i4004.  
+* 16 bit address bus
+* endianess - (Little endian) - not sure
 
 === INSTRUCTIONS ===
 code op   immBit    RETURN
@@ -60,11 +53,9 @@ code op   immBit    RETURN
 1110 CMP 	0		C 	 <- [RA]>imm8, Z <- [RA]==imm8
 
 1111 HLT	0 
-=================================================================================
-= imm8/16 are the byte(s) immediately following the instruction byte in memory	=
-= with imm8/reg and imm16/HL, the choice is indicated by the y-bit				=
-= (see INSTRUCTION LAYOUT)														=
-=================================================================================
+
+*imm8/imm16 are the byte(s) immediately following the instruction byte in memory*				
+
 === REGISTERS ===
 A : ACCUMULATOR
 B : TEMP
@@ -78,8 +69,6 @@ F : FLAGS
 	Z:ZERO
 	N:NEGATIVE
 	O:Odd
-
-
 
 === INSTRUCTION LAYOUT ===
 Instruction layout is XXXXYZZZ 
