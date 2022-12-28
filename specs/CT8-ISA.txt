@@ -14,11 +14,11 @@ Then it would be cool to write an ASSEMBLER.
 All computations should perform in ALU, the design of the circuit is similar to the i4004.  
 
 === INSTRUCTIONS ===
-code op   immBit    RTN
-0000 HLT	1		
+code op   immBit    RETURN
+0000 		
 
-0001 LW  	1		RA	 <-	[[reg]]
-0010 SW  	1		[RA] <-	[reg]
+0001 LW  	1		RA	 <-	[HL]
+0010 SW  	1		[HL] <-	RA
 0011 MW  	1		reg	 <-	RA	
 
 0100 JMP	1		PC 	 <- [HL]
@@ -33,15 +33,16 @@ code op   immBit    RTN
 1011 OR 	1		RA	 <- [RA] 	or 		[reg]
 1100 XOR	1		RA	 <- [RA] 	xor		[reg]
 1101 NOT	1		RA	 <- not 	[RA] 
-1110    	1		RA	 <-
+1110 CMP 	1		C 	 <- [RA]>[reg], Z <- [RA]==[reg]
 
-1111 CMP 	1		C 	 <- [RA]>[reg], Z <- [RA]==[reg]
+1111 HLT	1
 =======================================================
 
-code op   immBit    RTN
-0000 HLT	0 		
+code op   immBit    RETURN
+0000 		
 
 0001 LW  	0		RA	 <-	imm8
+0010 SW  	0		[imm16] <-	RA
 0011 MW  	0		RA	 <-	imm8	
 
 0100 JMP	0		PC 	 <- imm16
@@ -54,16 +55,16 @@ code op   immBit    RTN
 1001 SUB	0		RA	 <- [RA] 	- 		imm8
 1010 AND	0		RA	 <- [RA] 	and		imm8
 1011 OR 	0		RA	 <- [RA] 	or 		imm8
-1100 NOT	0		RA	 <- [RA] 	not 	imm8
-1101 XOR	0		RA	 <- [RA] 	xor		imm8
-1110    	0		RA	 <-
+1100 XOR	0		RA	 <- [RA] 	xor		imm8
+1101 NOT	0		RA	 <- [RA] 	not 	imm8
+1110 CMP 	0		C 	 <- [RA]>imm8, Z <- [RA]==imm8
 
-1111 CMP 	0		C 	 <- [RA]>imm8, Z <- [RA]==imm8
-
-* imm8/16 are the byte(s) immediately following the instruction byte in memory
-* with imm8/reg and imm16/HL, the choice is indicated by the y-bit
-  (see INSTRUCTION LAYOUT)
-
+1111 HLT	0 
+=================================================================================
+= imm8/16 are the byte(s) immediately following the instruction byte in memory	=
+= with imm8/reg and imm16/HL, the choice is indicated by the y-bit				=
+= (see INSTRUCTION LAYOUT)														=
+=================================================================================
 === REGISTERS ===
 A : ACCUMULATOR
 B : TEMP
@@ -85,3 +86,11 @@ Instruction layout is XXXXYZZZ
 X: 4 bit instruction identifier
 Y: 0 if is memory, 1 if register
 Z: 3 bit register identifier
+
+=== ADDRESS LAYOUT ===
+YXXXXXXXXXXXXXXX
+Y -1bit  -> 0 = ROM; 1 = RAM
+X -15bit -> ADDR
+=== RAM BANKING ===
+0x0000...0x7fff - ROM
+0x8000...0xffff - RAM
