@@ -15,7 +15,7 @@ All computations should perform in ALU, the design of the circuit is similar to 
 
 === INSTRUCTIONS ===
 code op   immBit    RETURN
-0000 
+0000 NOP
 
 0001 LW  	1		reg	 <-	[HL]
 0010 SW  	1		[HL] <-	reg
@@ -39,11 +39,11 @@ code op   immBit    RETURN
 =======================================================
 
 code op   immBit    RETURN
-0000 
+0000 NOP
 
 0001 LW  	0		reg	 <-	imm8
 0010 SW  	0		[imm16] <-	reg
-0011 MW  	0		RA	 <-	imm8	
+0011 MW  	0		reg	 <-	imm8	??????	
 
 0100 LDA	0		HL = imm16
 0101 JNZ	0		PC 	 <- imm16 if Z == 0
