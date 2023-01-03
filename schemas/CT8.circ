@@ -4535,7 +4535,7 @@
     <a name="appearance" val="evolution"/>
     <a name="circuit" val="CPU"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="1.0"/>
+    <a name="simulationFrequency" val="16.0"/>
     <comp lib="0" loc="(1010,580)" name="Splitter">
       <a name="fanout" val="6"/>
       <a name="incoming" val="6"/>
@@ -4743,6 +4743,11 @@
       <a name="label" val="Fi2"/>
       <a name="labelfont" val="SansSerif bold 9"/>
     </comp>
+    <comp lib="0" loc="(2130,1020)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="rst"/>
+      <a name="labelfont" val="SansSerif bold 9"/>
+    </comp>
     <comp lib="0" loc="(250,250)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="Aoe"/>
@@ -4880,13 +4885,15 @@
       <a name="addrWidth" val="15"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 15 8
-0 1 11 21 22 38 4 80
-1 12
+0 1 25 21 25 3e 6 0
+c ff ff ff 41 73 5c 4
+80 0 12 ff ff ff
 </a>
     </comp>
     <comp lib="4" loc="(2100,1030)" name="RAM">
       <a name="addrWidth" val="15"/>
       <a name="appearance" val="logisim_evolution"/>
+      <a name="clearpin" val="true"/>
       <a name="databus" val="bidir"/>
     </comp>
     <comp lib="4" loc="(480,740)" name="J-K Flip-Flop">
@@ -4980,7 +4987,7 @@
     <wire from="(1370,580)" to="(1380,580)"/>
     <wire from="(1380,760)" to="(1560,760)"/>
     <wire from="(1380,770)" to="(1570,770)"/>
-    <wire from="(1380,780)" to="(1560,780)"/>
+    <wire from="(1380,780)" to="(1570,780)"/>
     <wire from="(1380,790)" to="(1410,790)"/>
     <wire from="(1380,820)" to="(1410,820)"/>
     <wire from="(1380,840)" to="(1410,840)"/>
@@ -5078,6 +5085,8 @@
     <wire from="(2030,760)" to="(2090,760)"/>
     <wire from="(2080,1100)" to="(2100,1100)"/>
     <wire from="(2090,760)" to="(2090,780)"/>
+    <wire from="(2130,1020)" to="(2140,1020)"/>
+    <wire from="(2140,1020)" to="(2140,1030)"/>
     <wire from="(2330,350)" to="(2330,740)"/>
     <wire from="(2330,350)" to="(2350,350)"/>
     <wire from="(2330,760)" to="(2330,830)"/>
