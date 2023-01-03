@@ -43,7 +43,7 @@ code op   immBit    RETURN
 
 0001 LW  	0		reg	 <-	imm8
 0010 SW  	0		[imm16] <-	reg
-0011 MW  	0		reg	 <-	imm8	??????	
+0011 MW  	0		reg	 <-	imm8	??????	- not done because it is the same as the LW
 
 0100 LDA	0		HL = imm16
 0101 JNZ	0		PC 	 <- imm16 if Z == 0
