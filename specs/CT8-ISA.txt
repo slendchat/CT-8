@@ -32,7 +32,7 @@ code op   immBit    RETURN
 a	1010 AND	1		RA	 <- [RA] 	and		[reg]
 b	1011 OR 	1		RA	 <- [RA] 	or 		[reg]
 c	1100 XOR	1		RA	 <- [RA] 	xor		[reg]
-d	1101 NOT	1		RA	 <- not 	[RA] 
+d	1101 NOT	1		RA	 <- not 	[reg] 
 e	1110 CMP 	1		Z=1  <- [RA]==[reg]
 
 f	1111 HLT	1
@@ -56,7 +56,7 @@ code op   immBit    RETURN
 a	1010 AND	0		RA	 <- [RA] 	and		imm8
 b	1011 OR 	0		RA	 <- [RA] 	or 		imm8
 c	1100 XOR	0		RA	 <- [RA] 	xor		imm8
-d	1101 NOT	0		RA	 <- [RA] 	not 	imm8
+d	1101 NOT	0		RA	 <- not 	imm8
 e	1110 CMP 	0		Z <- [RA]==imm8
 	
 f	1111 HLT	0 
@@ -73,7 +73,7 @@ D : GP register
 E : GP register
 L : GP/LOW INDEX REGISTER
 H : GP/HIGH INDEX REGISTER
-F : FLAGS
+F : FLAGS (only zero is used)
 	C:CARRY
 	Z:ZERO
 	N:NEGATIVE
