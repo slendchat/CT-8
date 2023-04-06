@@ -1,5 +1,5 @@
 # Processor: CT-8
-### === **DESCRITPION** ===
+## === **DESCRITPION** ===
 + This is working version of *CT-8* processor capable to perform **logical** and **arithmetical** operations.
 + Also it is able to operate **branch** instructions, as uncoditional as conditional. 
 + It is made using the bare logical units like AND gate, decoder, multiplexer. 
@@ -19,7 +19,18 @@
 + GP reg 	-- general purpose register.
 + immBit 	-- bit that specify operation to be immediate or not
 
-### === REGISTERS ===
+# TABLE OF CONTENTS
+- [Processor: CT-8](#processor--ct-8)
+  * [=== **DESCRITPION** ===](#------descritpion------)
+    + [=== OVERVIEW ===](#----overview----)
+    + [=== TERMINOLOGY ===](#----terminology----)
+  * [=== REGISTERS ===](#----registers----)
+  * [=== INSTRUCTIONS ===](#----instructions----)
+    + [=== INSTRUCTION LAYOUT ===](#----instruction-layout----)
+    + [=== ADDRESS LAYOUT ===](#----address-layout----)
+    + [=== RAM BANKING ===](#----ram-banking----)
+
+## === REGISTERS ===
 + A : ACCUMULATOR
 + B : TEMP
 + C : GP register
@@ -33,7 +44,7 @@
 	3.N:NEGATIVE
 	4.O:Odd
 
-### === INSTRUCTIONS ===
+## === INSTRUCTIONS ===
 |code op | immBit | description |
 | ------ | ------ | ----------- |
 |0000 NOP|	  |		|
@@ -76,10 +87,10 @@ Y: 0 if is imm, 1 if register
 Z: 3 bit register identifier
 
 ### === ADDRESS LAYOUT ===
-YXXXXXXXXXXXXXXX
-Y -1bit  -> 0 = ROM; 1 = RAM
-X -15bit -> ADDR
+YXXXXXXXXXXXXXXX <br />
+Y -1bit  -> 0 = ROM; 1 = RAM <br />
+X -15bit -> ADDR <br />
 
 ### === RAM BANKING ===
-0x0000...0x7fff - ROM
-0x8000...0xffff - RAM
+0x0000...0x7fff - ROM <br /> 
+0x8000...0xffff - RAM <br />
