@@ -2,38 +2,38 @@
 
 # TABLE OF CONTENTS
 - [Processor: CT-8](#processor--ct-8)
-  * [**DESCRIPTION**](#--description--)
-    + [OVERVIEW](#overview)
-    + [TERMINOLOGY](#terminology)
+  * [DESCRIPTION](#--description--)
+    + [Overview](#overview)
+    + [Terminology](#terminology)
   * [MEMORY](#memory)
-    + [REGISTERS](#registers)
-    + [ADDRESS LAYOUT](#address-layout)
-    + [RAM BANKING](#ram-banking)
+    + [Registers](#registers)
+    + [Address layout](#address-layout)
+    + [RAM banking](#ram-banking)
   * [INSTRUCTIONS](#instructions)
-    + [INSTRUCTION LAYOUT](#instruction-layout)
+    + [Instruction layout](#instruction-layout)
 
-## **DESCRIPTION**
+## DESCRIPTION
 + This is working version of *CT-8* processor capable to perform **logical** and **arithmetical** operations.
 + Also it is able to operate **branch** instructions, as uncoditional as conditional. 
 + It is made using the bare logical units like AND gate, decoder, multiplexer. 
 + The archetype used to create *CT-8* is intel *i4004* and *i8008* with slight changes and simplifications.
 + Documents on **references** can be found in CT-8/Datasheets/ directory. 
 
-### OVERVIEW
+### Overview
 + 8-bit data word size
 + 8-bit instruction word size
 + 16 bit address bus
 + endianess - big endian
 + operations are register-register and immidiate. 
 
-### TERMINOLOGY
+### Terminology
 + imm8 / imm16 	-- stands for immediate value, following instruction word in memory.
 + imm8  	-- 8 refers to length in bits of imm value.
 + GP reg 	-- general purpose register.
 + immBit 	-- bit that specify operation to be immediate or not
 
 ## MEMORY
-### REGISTERS
+### Registers
 + A : ACCUMULATOR
 + B : TEMP
 + C : GP register
@@ -42,23 +42,23 @@
 + L : GP/LOW INDEX REGISTER
 + H : GP/HIGH INDEX REGISTER
 + F : FLAGS (only zero is used)<br />
-	- C:CARRY<br />
-	- Z:ZERO<br />
-	- N:NEGATIVE<br />
-	- O:Odd<br />
+	- C:  Carry<br />
+	- Z:  Zero<br />
+	- N:  Negative<br />
+	- O:  Odd<br />
 
-### ADDRESS LAYOUT
+### Address layout
 YXXXXXXXXXXXXXXX <br />
 Y -1bit  -> 0 = ROM; 1 = RAM <br />
 X -15bit -> ADDR <br />
 
-### RAM BANKING
+### RAM banking
 0x0000...0x7fff - ROM <br /> 
 0x8000...0xffff - RAM <br />
 
 ## INSTRUCTIONS
 
-### INSTRUCTION LAYOUT
+### Instruction layout
 **Instruction layout is ZZZYXXXX** <br />
 X: 4 bit instruction identifier<br />
 Y: 0 if is imm, 1 if register<br />
