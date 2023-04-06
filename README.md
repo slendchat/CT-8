@@ -57,6 +57,13 @@ X -15bit -> ADDR <br />
 0x8000...0xffff - RAM <br />
 
 ## === INSTRUCTIONS ===
+
+### === INSTRUCTION LAYOUT ===
+**Instruction layout is ZZZYXXXX** <br />
+X: 4 bit instruction identifier<br />
+Y: 0 if is imm, 1 if register<br />
+Z: 3 bit register identifier
+
 |code op | immBit | description |
 | ------ | ------ | ----------- |
 |0000 NOP|	  |		|
@@ -91,9 +98,3 @@ X -15bit -> ADDR <br />
 |1101 NOT| 0	  |RA	 <- not 	imm8        |      
 |1110 CMP| 0	  |Z     <- [RA]==imm8          |    
 |1111 HLT| 0 	  |                             |
-
-### === INSTRUCTION LAYOUT ===
-**Instruction layout is ZZZYXXXX** <br />
-X: 4 bit instruction identifier<br />
-Y: 0 if is imm, 1 if register<br />
-Z: 3 bit register identifier
