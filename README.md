@@ -41,11 +41,11 @@
 + E : GP register
 + L : GP/LOW INDEX REGISTER
 + H : GP/HIGH INDEX REGISTER
-+ F : FLAGS (only zero is used)
-	-1.C:CARRY
-	-2.Z:ZERO
-	-3.N:NEGATIVE
-	-4.O:Odd
++ F : FLAGS (only zero is used)<br />
+	- 1.C:CARRY<br />
+	- 2.Z:ZERO<br />
+	- 3.N:NEGATIVE<br />
+	- 4.O:Odd<br />
 
 ### === ADDRESS LAYOUT ===
 YXXXXXXXXXXXXXXX <br />
