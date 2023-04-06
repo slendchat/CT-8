@@ -18,7 +18,20 @@
 + imm8  	-- 8 refers to length in bits of imm value.
 + GP reg 	-- general purpose register.
 + immBit 	-- bit that specify operation to be immediate or not
-+ 
+
+### === REGISTERS ===
++ A : ACCUMULATOR
++ B : TEMP
++ C : GP register
++ D : GP register
++ E : GP register
++ L : GP/LOW INDEX REGISTER
++ H : GP/HIGH INDEX REGISTER
++ F : FLAGS (only zero is used)
+	1.C:CARRY
+	2.Z:ZERO
+	3.N:NEGATIVE
+	4.O:Odd
 
 ### === INSTRUCTIONS ===
 |code op | immBit | description |
@@ -56,20 +69,17 @@
 |1110 CMP| 0	  |Z     <- [RA]==imm8          |    
 |1111 HLT| 0 	  |                             |
 
-
-
-
-
-=== INSTRUCTION LAYOUT ===
-Instruction layout is ZZZYXXXX 
+### === INSTRUCTION LAYOUT ===
+**Instruction layout is ZZZYXXXX** 
 X: 4 bit instruction identifier
-Y: 0 if is memory, 1 if register
+Y: 0 if is imm, 1 if register
 Z: 3 bit register identifier
 
-=== ADDRESS LAYOUT ===
+### === ADDRESS LAYOUT ===
 YXXXXXXXXXXXXXXX
 Y -1bit  -> 0 = ROM; 1 = RAM
 X -15bit -> ADDR
-=== RAM BANKING ===
+
+### === RAM BANKING ===
 0x0000...0x7fff - ROM
 0x8000...0xffff - RAM
