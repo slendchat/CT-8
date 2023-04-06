@@ -1,4 +1,16 @@
 # Processor: CT-8
+
+# TABLE OF CONTENTS
+- [Processor: CT-8](#processor--ct-8)
+  * [=== **DESCRITPION** ===](#------descritpion------)
+    + [=== OVERVIEW ===](#----overview----)
+    + [=== TERMINOLOGY ===](#----terminology----)
+  * [=== REGISTERS ===](#----registers----)
+  * [=== INSTRUCTIONS ===](#----instructions----)
+    + [=== INSTRUCTION LAYOUT ===](#----instruction-layout----)
+    + [=== ADDRESS LAYOUT ===](#----address-layout----)
+    + [=== RAM BANKING ===](#----ram-banking----)
+
 ## === **DESCRITPION** ===
 + This is working version of *CT-8* processor capable to perform **logical** and **arithmetical** operations.
 + Also it is able to operate **branch** instructions, as uncoditional as conditional. 
@@ -18,17 +30,6 @@
 + imm8  	-- 8 refers to length in bits of imm value.
 + GP reg 	-- general purpose register.
 + immBit 	-- bit that specify operation to be immediate or not
-
-# TABLE OF CONTENTS
-- [Processor: CT-8](#processor--ct-8)
-  * [=== **DESCRITPION** ===](#------descritpion------)
-    + [=== OVERVIEW ===](#----overview----)
-    + [=== TERMINOLOGY ===](#----terminology----)
-  * [=== REGISTERS ===](#----registers----)
-  * [=== INSTRUCTIONS ===](#----instructions----)
-    + [=== INSTRUCTION LAYOUT ===](#----instruction-layout----)
-    + [=== ADDRESS LAYOUT ===](#----address-layout----)
-    + [=== RAM BANKING ===](#----ram-banking----)
 
 ## === REGISTERS ===
 + A : ACCUMULATOR
