@@ -1,1 +1,1 @@
-Datasheets, images and everything helped me creating processor
+Datasheets, images and PDF files helped me creating processor
