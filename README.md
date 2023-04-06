@@ -1,20 +1,20 @@
 # Processor: CT-8
-## === **DESCRITPION** ===
+### === **DESCRITPION** ===
 This is working version of *CT-8* processor capable to perform **logical** and **arithmetical** operations.
 Also it is able to operate **branch** instructions, as uncoditional as conditional. 
 It is made using the bare logical units like AND gate, decoder, multiplexer. 
 The archetype used to create *CT-8* is intel *i4004* and *i8008* with slight changes and simplifications.
 Documents on **references** can be found in CT-8/Datasheets/ directory. 
 
-## === OVERVIEW ===
-! 8-bit data word size
-! 8-bit instruction word size
-! 16 bit address bus
-! endianess - big endian
-! operations are register-register and immidiate. 
+### === OVERVIEW ===
++ 8-bit data word size
++ 8-bit instruction word size
++ 16 bit address bus
++ endianess - big endian
++ operations are register-register and immidiate. 
 
-## === TERMINOLOGY ===
-! 
+### === TERMINOLOGY ===
+
 === INSTRUCTIONS ===
 code op   immBit    RETURN
 0	0000 NOP
