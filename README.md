@@ -93,7 +93,7 @@ X -15bit -> ADDR <br />
 |1111 HLT| 0 	  |                             |
 
 ### === INSTRUCTION LAYOUT ===
-**Instruction layout is ZZZYXXXX** 
-X: 4 bit instruction identifier
-Y: 0 if is imm, 1 if register
+**Instruction layout is ZZZYXXXX** <br />
+X: 4 bit instruction identifier<br />
+Y: 0 if is imm, 1 if register<br />
 Z: 3 bit register identifier
