@@ -2,7 +2,7 @@
 
 # TABLE OF CONTENTS
 - [Processor: CT-8](#processor--ct-8)
-  * [**DESCRITPION**](#--descritpion--)
+  * [**DESCRIPTION**](#--description--)
     + [OVERVIEW](#overview)
     + [TERMINOLOGY](#terminology)
   * [MEMORY](#memory)
@@ -12,7 +12,7 @@
   * [INSTRUCTIONS](#instructions)
     + [INSTRUCTION LAYOUT](#instruction-layout)
 
-## **DESCRITPION**
+## **DESCRIPTION**
 + This is working version of *CT-8* processor capable to perform **logical** and **arithmetical** operations.
 + Also it is able to operate **branch** instructions, as uncoditional as conditional. 
 + It is made using the bare logical units like AND gate, decoder, multiplexer. 
