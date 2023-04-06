@@ -3,14 +3,14 @@
 # TABLE OF CONTENTS
 - [Processor: CT-8](#processor--ct-8)
   * [**DESCRITPION**](#--descritpion--)
-    + [=== OVERVIEW ===](#----overview----)
-    + [=== TERMINOLOGY ===](#----terminology----)
+    + [OVERVIEW](#overview)
+    + [TERMINOLOGY](#terminology)
   * [MEMORY](#memory)
-    + [=== REGISTERS ===](#----registers----)
-    + [=== ADDRESS LAYOUT ===](#----address-layout----)
-    + [=== RAM BANKING ===](#----ram-banking----)
-  * [=== INSTRUCTIONS ===](#----instructions----)
-    + [=== INSTRUCTION LAYOUT ===](#----instruction-layout----)
+    + [REGISTERS](#registers)
+    + [ADDRESS LAYOUT](#address-layout)
+    + [RAM BANKING](#ram-banking)
+  * [INSTRUCTIONS](#instructions)
+    + [INSTRUCTION LAYOUT](#instruction-layout)
 
 ## **DESCRITPION**
 + This is working version of *CT-8* processor capable to perform **logical** and **arithmetical** operations.
@@ -19,21 +19,21 @@
 + The archetype used to create *CT-8* is intel *i4004* and *i8008* with slight changes and simplifications.
 + Documents on **references** can be found in CT-8/Datasheets/ directory. 
 
-### === OVERVIEW ===
+### OVERVIEW
 + 8-bit data word size
 + 8-bit instruction word size
 + 16 bit address bus
 + endianess - big endian
 + operations are register-register and immidiate. 
 
-### === TERMINOLOGY ===
+### TERMINOLOGY
 + imm8 / imm16 	-- stands for immediate value, following instruction word in memory.
 + imm8  	-- 8 refers to length in bits of imm value.
 + GP reg 	-- general purpose register.
 + immBit 	-- bit that specify operation to be immediate or not
 
 ## MEMORY
-### === REGISTERS ===
+### REGISTERS
 + A : ACCUMULATOR
 + B : TEMP
 + C : GP register
@@ -47,18 +47,18 @@
 	- N:NEGATIVE<br />
 	- O:Odd<br />
 
-### === ADDRESS LAYOUT ===
+### ADDRESS LAYOUT
 YXXXXXXXXXXXXXXX <br />
 Y -1bit  -> 0 = ROM; 1 = RAM <br />
 X -15bit -> ADDR <br />
 
-### === RAM BANKING ===
+### RAM BANKING
 0x0000...0x7fff - ROM <br /> 
 0x8000...0xffff - RAM <br />
 
-## === INSTRUCTIONS ===
+## INSTRUCTIONS
 
-### === INSTRUCTION LAYOUT ===
+### INSTRUCTION LAYOUT
 **Instruction layout is ZZZYXXXX** <br />
 X: 4 bit instruction identifier<br />
 Y: 0 if is imm, 1 if register<br />
