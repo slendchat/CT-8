@@ -84,8 +84,9 @@ Z: 3 bit register identifier
 |1100 XOR| 1	  |RA	 <- [RA]  xor	[reg]|
 |1101 NOT| 1	  |RA	 <- 	  not 	[reg]|
 |1110 CMP| 1	  |Z=1   <- [RA]  ==	[reg]|
-|1111 HLT| 1  	  |							 |
-|0000 NOP| 		  |								|	
+|1111 HLT| 1  	  |				|
+|0000 NOP| 	  |				|
+|	 |	  |				|
 |0001 LW | 0	  |reg	   <-	imm8            |  
 |0010 SW | 0	  |[imm16] <-	reg             |    
 |0011 MW | 0	  |not done,the same as the LW  |
