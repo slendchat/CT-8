@@ -27,7 +27,7 @@
 + Operations are register-register and immidiate. 
 + Oerations store result in accumulator registor(RA).
 + HL register can be written separately using LW, or by one instruction using LDA instr.
-+ TEMP and FLAG register can't be written or read by user intentionally
++ TEMP and FLAG register can't be written or read by user intentionally.
 
 ### Terminology
 + imm8 / imm16 	-- stands for immediate value, following instruction word in memory.
