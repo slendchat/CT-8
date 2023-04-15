@@ -73,7 +73,7 @@ Z: 3 bit register identifier
 |0100 NOP| 1	  |							 |
 |0101 JNZ| 1	  |PC 	 <- [HL] if Z == 0   |
 |0110 JZ | 1	  |PC 	 <- [HL] if Z == 1 	 |
-|0111 NOP| 1	  |							 |
+|0111 JMP| 1	  |PC	 <- [HL]							 |
 |1000 ADD| 1	  |RA	 <- [RA]  +		[reg]|
 |1001 SUB| 1	  |RA	 <- [RA]  - 	[reg]|
 |1010 AND| 1	  |RA	 <- [RA]  and	[reg]|
@@ -89,7 +89,7 @@ Z: 3 bit register identifier
 |0100 LDA| 0	  |HL    =  imm16               |
 |0101 JNZ| 0	  |PC 	 <- imm16 if Z == 0     |         
 |0110 JZ | 0	  |PC 	 <- imm16 if Z == 1     |         
-|0111 NOP| 0	  |                             |             
+|0111 JMP| 0	  |PC	 <- imm16                             |             
 |1000 ADD| 0	  |RA	 <- [RA] 	+		imm8|
 |1001 SUB| 0	  |RA	 <- [RA] 	- 		imm8|
 |1010 AND| 0	  |RA	 <- [RA] 	and		imm8|
