@@ -89,7 +89,7 @@ Z: 3 bit register identifier
 |0000 NOP| 	  |				|
 |0001 LW | 0	  |reg	   <-	imm8            |  
 |0010 SW | 0	  |[imm16] <-	reg             |    
-|0011 MW | 0	  |not done,the same as the LW  |
+|0011 NOP| 0	  |				|
 |0100 LDA| 0	  |HL    =  imm16               |
 |0101 JNZ| 0	  |PC 	 <- imm16 if Z == 0     |         
 |0110 JZ | 0	  |PC 	 <- imm16 if Z == 1     |         
