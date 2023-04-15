@@ -20,11 +20,14 @@
 + Documents on **references** can be found in CT-8/Datasheets/ directory. 
 
 ### Overview
-+ 8-bit data word size
-+ 8-bit instruction word size
-+ 16 bit address bus
-+ endianess - big endian
-+ operations are register-register and immidiate. 
++ 8-bit data word size.
++ 8-bit instruction word size.
++ 16 bit address bus.
++ Endianess - big endian.
++ Operations are register-register and immidiate. 
++ Oerations store result in accumulator registor(RA).
++ HL register can be written separately using LW, or by one instruction using LDA instr.
++ TEMP and FLAG register can't be written or read by user intentionally
 
 ### Terminology
 + imm8 / imm16 	-- stands for immediate value, following instruction word in memory.
@@ -34,14 +37,14 @@
 
 ## MEMORY
 ### Registers
-+ A : ACCUMULATOR
-+ B : TEMP
-+ C : GP register
-+ D : GP register
-+ E : GP register
-+ L : GP/LOW INDEX REGISTER
-+ H : GP/HIGH INDEX REGISTER
-+ F : FLAGS (only zero is used)<br />
++ A : ACCUMULATOR 0x0
++ B : GP register 0x2
++ C : GP register 0x4
++ D : GP register 0x6
++ E : GP register 0x8
++ L : GP/LOW INDEX REGISTER 0xA
++ H : GP/HIGH INDEX REGISTER 0xC
++ F : FLAGS (only zero is used, cant be accessed by user)<br />
 	- C:  Carry<br />
 	- Z:  Zero<br />
 	- N:  Negative<br />
