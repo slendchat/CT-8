@@ -67,38 +67,39 @@ X: 4 bit instruction identifier<br />
 Y: 0 if is imm, 1 if register<br />
 Z: 3 bit register identifier
 
-|code op | immBit | description |
-| ------ | ------ | ----------- |
-|0000 NOP|	  |		|
-|0001 LW | 1	  |reg	 <-	[HL]	|
-|0010 SW | 1	  |[HL]  <-	reg				 |
-|0011 MW | 1	  |reg	 <-	RA				 |
-|0100 NOP| 1	  |							 |
-|0101 JNZ| 1	  |PC 	 <- [HL] if Z == 0   |
-|0110 JZ | 1	  |PC 	 <- [HL] if Z == 1 	 |
-|0111 JMP| 1	  |PC	 <- [HL]							 |
-|1000 ADD| 1	  |RA	 <- RA  +		reg|
-|1001 SUB| 1	  |RA	 <- RA  - 	reg|
-|1010 AND| 1	  |RA	 <- RA  and	reg|
-|1011 OR | 1	  |RA	 <- RA  or 	reg|
-|1100 XOR| 1	  |RA	 <- RA  xor	reg|
-|1101 NOT| 1	  |RA	 <- 	  not 	reg|
-|1110 CMP| 1	  |Z=1   <- RA  ==	reg|
-|1111 HLT| 1  	  |				|
-|	 |	  |				|
-|0000 NOP| 	  |				|
-|0001 LW | 0	  |reg	   <-	imm8            |  
-|0010 SW | 0	  |[imm16] <-	reg             |    
-|0011 NOP| 0	  |				|
-|0100 LDA| 0	  |HL    =  imm16               |
-|0101 JNZ| 0	  |PC 	 <- imm16 if Z == 0     |         
-|0110 JZ | 0	  |PC 	 <- imm16 if Z == 1     |         
-|0111 JMP| 0	  |PC	 <- imm16                             |             
-|1000 ADD| 0	  |RA	 <- RA 	+		imm8|
-|1001 SUB| 0	  |RA	 <- RA 	- 		imm8|
-|1010 AND| 0	  |RA	 <- RA 	and		imm8|
-|1011 OR | 0	  |RA	 <- RA 	or 		imm8|
-|1100 XOR| 0	  |RA	 <- RA 	xor		imm8|
-|1101 NOT| 0	  |RA	 <- not 	imm8        |      
-|1110 CMP| 0	  |Z     <- RA==imm8          |    
-|1111 HLT| 0 	  |                             |
+|HEX_CODE|code op | immBit | description |
+| ------ | ------ | ------ | ----------- |
+|10|0000 NOP|	 	  |				|
+|11|0001 LW | 1	  |reg	 <-	[HL]			 |
+|12|0010 SW | 1	  |[HL]  <-	reg				 |
+|13|0011 MW | 1	  |reg	 <-	RA				 |
+|14|0100 NOP| 1	  |							 |
+|15|0101 JNZ| 1	  |PC 	 <- [HL] if Z == 0   |
+|16|0110 JZ | 1	  |PC 	 <- [HL] if Z == 1 	 |
+|17|0111 JMP| 1	  |PC	 <- [HL]			 |
+|18|1000 ADD| 1	  |RA	 <- RA  +		reg  |
+|19|1001 SUB| 1	  |RA	 <- RA  - 	reg|
+|1a|1010 AND| 1	  |RA	 <- RA  and	reg|
+|1b|1011 OR | 1	  |RA	 <- RA  or 	reg|
+|1c|1100 XOR| 1	  |RA	 <- RA  xor	reg|
+|1d|1101 NOT| 1	  |RA	 <- 	  not 	reg|
+|1e|1110 CMP| 1	  |Z=1   <- RA  ==	reg|
+|1f|1111 HLT| 1  	  |				|
+||	 |	  |				|
+|0|0000 NOP| 	  |				|
+|1|0001 LW | 0	  |reg	   <-	imm8            |  
+|2|0010 SW | 0	  |[imm16] <-	reg             |    
+|3|0011 NOP| 0	  |				|
+|4|0100 LDA| 0	  |HL    =  imm16               |
+|5|0101 JNZ| 0	  |PC 	 <- imm16 if Z == 0     |         
+|6|0110 JZ | 0	  |PC 	 <- imm16 if Z == 1     |         
+|7|0111 JMP| 0	  |PC	 <- imm16                             |             
+|8|1000 ADD| 0	  |RA	 <- RA 	+		imm8|
+|9|1001 SUB| 0	  |RA	 <- RA 	- 		imm8|
+|a|1010 AND| 0	  |RA	 <- RA 	and		imm8|
+|b|1011 OR | 0	  |RA	 <- RA 	or 		imm8|
+|c|1100 XOR| 0	  |RA	 <- RA 	xor		imm8|
+|d|1101 NOT| 0	  |RA	 <- not 	imm8        |      
+|e|1110 CMP| 0	  |Z     <- RA - imm8          |    
+|f|1111 HLT| 0 	  |                             |
+
