@@ -77,13 +77,13 @@ Z: 3 bit register identifier
 |0101 JNZ| 1	  |PC 	 <- [HL] if Z == 0   |
 |0110 JZ | 1	  |PC 	 <- [HL] if Z == 1 	 |
 |0111 JMP| 1	  |PC	 <- [HL]							 |
-|1000 ADD| 1	  |RA	 <- [RA]  +		[reg]|
-|1001 SUB| 1	  |RA	 <- [RA]  - 	[reg]|
-|1010 AND| 1	  |RA	 <- [RA]  and	[reg]|
-|1011 OR | 1	  |RA	 <- [RA]  or 	[reg]|
-|1100 XOR| 1	  |RA	 <- [RA]  xor	[reg]|
-|1101 NOT| 1	  |RA	 <- 	  not 	[reg]|
-|1110 CMP| 1	  |Z=1   <- [RA]  ==	[reg]|
+|1000 ADD| 1	  |RA	 <- RA  +		reg|
+|1001 SUB| 1	  |RA	 <- RA  - 	reg|
+|1010 AND| 1	  |RA	 <- RA  and	reg|
+|1011 OR | 1	  |RA	 <- RA  or 	reg|
+|1100 XOR| 1	  |RA	 <- RA  xor	reg|
+|1101 NOT| 1	  |RA	 <- 	  not 	reg|
+|1110 CMP| 1	  |Z=1   <- RA  ==	reg|
 |1111 HLT| 1  	  |				|
 |	 |	  |				|
 |0000 NOP| 	  |				|
@@ -94,11 +94,11 @@ Z: 3 bit register identifier
 |0101 JNZ| 0	  |PC 	 <- imm16 if Z == 0     |         
 |0110 JZ | 0	  |PC 	 <- imm16 if Z == 1     |         
 |0111 JMP| 0	  |PC	 <- imm16                             |             
-|1000 ADD| 0	  |RA	 <- [RA] 	+		imm8|
-|1001 SUB| 0	  |RA	 <- [RA] 	- 		imm8|
-|1010 AND| 0	  |RA	 <- [RA] 	and		imm8|
-|1011 OR | 0	  |RA	 <- [RA] 	or 		imm8|
-|1100 XOR| 0	  |RA	 <- [RA] 	xor		imm8|
+|1000 ADD| 0	  |RA	 <- RA 	+		imm8|
+|1001 SUB| 0	  |RA	 <- RA 	- 		imm8|
+|1010 AND| 0	  |RA	 <- RA 	and		imm8|
+|1011 OR | 0	  |RA	 <- RA 	or 		imm8|
+|1100 XOR| 0	  |RA	 <- RA 	xor		imm8|
 |1101 NOT| 0	  |RA	 <- not 	imm8        |      
-|1110 CMP| 0	  |Z     <- [RA]==imm8          |    
+|1110 CMP| 0	  |Z     <- RA==imm8          |    
 |1111 HLT| 0 	  |                             |
