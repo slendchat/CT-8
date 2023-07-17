@@ -18,7 +18,7 @@
 + It is made using the bare logical units like AND gate, decoder, multiplexer. 
 + The archetype used to create *CT-8* is intel *i4004* and *i8008* with slight changes and simplifications.
 + Documents on **references** can be found in *CT-8/Datasheets/* directory. 
-
+![CPU](https://github.com/slendchat/CT-8/blob/main/CPU.png?raw=true)
 ### Overview
 + 8-bit data word size.
 + 8-bit instruction word size.
