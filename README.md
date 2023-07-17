@@ -51,6 +51,8 @@
 	- Z:  Zero<br />
 	- N:  Negative<br />
 	- O:  Odd<br />
+ 
+![REGS](https://github.com/slendchat/CT-8/blob/main/images/REG_BANK.png?raw=true)
 
 ### Address layout
 YXXXXXXXXXXXXXXX <br />
