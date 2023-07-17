@@ -86,20 +86,20 @@ Z: 3 bit register identifier
 |1e|1110 CMP| 1	  |Z=1   <- RA  ==	reg|
 |1f|1111 HLT| 1  	  |				|
 ||	 |	  |				|
-|0|0000 NOP| 	  |				|
-|1|0001 LW | 0	  |reg	   <-	imm8            |  
-|2|0010 SW | 0	  |[imm16] <-	reg             |    
-|3|0011 NOP| 0	  |				|
-|4|0100 LDA| 0	  |HL    =  imm16               |
-|5|0101 JNZ| 0	  |PC 	 <- imm16 if Z == 0     |         
-|6|0110 JZ | 0	  |PC 	 <- imm16 if Z == 1     |         
-|7|0111 JMP| 0	  |PC	 <- imm16                             |             
-|8|1000 ADD| 0	  |RA	 <- RA 	+		imm8|
-|9|1001 SUB| 0	  |RA	 <- RA 	- 		imm8|
-|a|1010 AND| 0	  |RA	 <- RA 	and		imm8|
-|b|1011 OR | 0	  |RA	 <- RA 	or 		imm8|
-|c|1100 XOR| 0	  |RA	 <- RA 	xor		imm8|
-|d|1101 NOT| 0	  |RA	 <- not 	imm8        |      
-|e|1110 CMP| 0	  |Z=1     <- RA == imm8          |    
-|f|1111 HLT| 0 	  |                             |
+|00|0000 NOP| 	  |				|
+|01|0001 LW | 0	  |reg	   <-	imm8            |  
+|02|0010 SW | 0	  |[imm16] <-	reg             |    
+|03|0011 NOP| 0	  |				|
+|04|0100 LDA| 0	  |HL    =  imm16               |
+|05|0101 JNZ| 0	  |PC 	 <- imm16 if Z == 0     |         
+|06|0110 JZ | 0	  |PC 	 <- imm16 if Z == 1     |         
+|07|0111 JMP| 0	  |PC	 <- imm16                             |             
+|08|1000 ADD| 0	  |RA	 <- RA 	+		imm8|
+|09|1001 SUB| 0	  |RA	 <- RA 	- 		imm8|
+|0a|1010 AND| 0	  |RA	 <- RA 	and		imm8|
+|0b|1011 OR | 0	  |RA	 <- RA 	or 		imm8|
+|0c|1100 XOR| 0	  |RA	 <- RA 	xor		imm8|
+|0d|1101 NOT| 0	  |RA	 <- not 	imm8        |      
+|0e|1110 CMP| 0	  |Z=1     <- RA == imm8          |    
+|0f|1111 HLT| 0 	  |                             |
 
