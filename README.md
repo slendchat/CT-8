@@ -100,6 +100,6 @@ Z: 3 bit register identifier
 |b|1011 OR | 0	  |RA	 <- RA 	or 		imm8|
 |c|1100 XOR| 0	  |RA	 <- RA 	xor		imm8|
 |d|1101 NOT| 0	  |RA	 <- not 	imm8        |      
-|e|1110 CMP| 0	  |Z     <- RA - imm8          |    
+|e|1110 CMP| 0	  |Z=1     <- RA == imm8          |    
 |f|1111 HLT| 0 	  |                             |
 
