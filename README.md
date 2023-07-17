@@ -17,7 +17,8 @@
 + Also it is able to operate **branch** instructions, as uncoditional as conditional. 
 + It is made using the bare logical units like AND gate, decoder, multiplexer. 
 + The archetype used to create *CT-8* is intel *i4004* and *i8008* with slight changes and simplifications.
-+ Documents on **references** can be found in *CT-8/Datasheets/* directory. 
++ Documents on **references** can be found in *CT-8/Datasheets/* directory.
++ CPU **screenshots** are storeg in images directory.
 ![CPU](https://github.com/slendchat/CT-8/blob/main/images/CPU.png?raw=true)
 ### Overview
 + 8-bit data word size.
