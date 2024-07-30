@@ -20,7 +20,7 @@
 + Documents on **references** can be found in *CT-8/Datasheets/* directory.
 + CPU **screenshots** are stored in images directory.
 
-![CPU](https://github.com/slendchat/CT-8/blob/main/images/CPU.png?raw=true)
+![CPU](https://github.com/slendchat/CT-8/blob/main/images/CPU_VID.GIF?raw=true)
 ### Overview
 + 8-bit data word size.
 + 8-bit instruction word size.
