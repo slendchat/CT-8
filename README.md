@@ -67,6 +67,7 @@ X -15bit -> ADDR <br />
 ## INSTRUCTIONS
 
 ### Instruction layout
+![ALU](https://github.com/slendchat/CT-8/blob/main/images/ALU.GIF?raw=true)
 **Instruction layout is ZZZYXXXX** <br />
 X: 4 bit instruction identifier<br />
 Y: 0 if is imm, 1 if register<br />
