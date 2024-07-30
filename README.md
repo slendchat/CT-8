@@ -46,6 +46,7 @@
 + E : GP register 0x8
 + L : GP/LOW INDEX REGISTER 0xA
 + H : GP/HIGH INDEX REGISTER 0xC
++ S : GP register 0xE
 + F : FLAGS (only zero is used, cant be accessed by user)<br />
 	- C:  Carry<br />
 	- Z:  Zero<br />
